@@ -1,17 +1,4 @@
-ls                  listing all files and folders under current directory without their details
-ls -l               listing all files and folders under current directory with their details
-ls ~                listing all files and folders under ~ or /usr/ directory | format is ls [directory path here]
-ls /                listing all files and folders under / or root directory | format is ls [directory path here]
-ls -R               listing all files and folders under its subdirectory recursively per folder
-ls -t               listing all files and folders sorted by date and time
-ls -a               listing all files and folders include the hidden one
-ls -s               listing all files and folders with their own size
-ls -sa              ls -s -a
-ls -tl              ls -t -l
-ls -lh              ls -l -h (or) ls -ls (or) ls -l -s
-ls --help           more commands and their functionality are listed in here
-
-==========================================================================================================================================
+Directory Explanation
 
 /                   root system directory
 /boot               for storing bootconfiguration like bootloader
@@ -27,3 +14,38 @@ ls --help           more commands and their functionality are listed in here
 /var                all system logs will be saved here
 /home               in Windows it is like "Users/", so it saves all user directories and files
 /proc               all running apps will save its files and folders here, once the apps stops, they are all deleted
+
+==========================================================================================================================================
+
+LS Commands Explanation
+
+ls                  listing all files and folders under current directory without their details
+ls -l               listing all files and folders under current directory with their details
+ls ~                listing all files and folders under ~ or /usr/ directory | format is ls [directory path here]
+ls /                listing all files and folders under / or root directory | format is ls [directory path here]
+ls -R               listing all files and folders under its subdirectory recursively per folder
+ls -t               listing all files and folders sorted by date and time
+ls -a               listing all files and folders include the hidden one
+ls -s               listing all files and folders with their own size
+ls -sa              ls -s -a
+ls -tl              ls -t -l
+ls -lh              ls -l -h (or) ls -ls (or) ls -l -s
+ls --help           more commands and their functionality are listed in here
+
+==========================================================================================================================================
+
+CP Commands Explanation
+
+cp
+        cp fil1.txt fil2.txt                    it will copy fil1.txt to the same folder and rename the new one to fil2.txt
+cp -s               create a symbolic links, which is like a shortcut. When we open the file, it will redirect to original file
+cp -R               recursively copy the folders and files under a directory which we want to copy.
+        cp -R folder1 folder2                   if folder2 presents, it will copy folder1 and its content to folder2
+                                                if folder2 is not, it will create folder2 and copy folder1 contents to folder1.
+        cp -R folder1 ../testfolder2/folder2    the same but with relative path
+        cp -R folder1 /home/user/testfolder2    the same but with absolute path
+cp -i               interactive mode, if the destination has the same file name or folder, it will prompt you question to overwrite
+cp -f               force copy if the folder cannot be open and it will remove and create a new folder with the same name
+
+==========================================================================================================================================
+
