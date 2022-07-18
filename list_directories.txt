@@ -1,0 +1,29 @@
+ls                  listing all files and folders under current directory without their details
+ls -l               listing all files and folders under current directory with their details
+ls ~                listing all files and folders under ~ or /usr/ directory | format is ls [directory path here]
+ls /                listing all files and folders under / or root directory | format is ls [directory path here]
+ls -R               listing all files and folders under its subdirectory recursively per folder
+ls -t               listing all files and folders sorted by date and time
+ls -a               listing all files and folders include the hidden one
+ls -s               listing all files and folders with their own size
+ls -sa              ls -s -a
+ls -tl              ls -t -l
+ls -lh              ls -l -h (or) ls -ls (or) ls -l -s
+ls --help           more commands and their functionality are listed in here
+
+==========================================================================================================================================
+
+/                   root system directory
+/boot               for storing bootconfiguration like bootloader
+/root               root user directory (basically root is a user, so it has its own home directory)
+/dev                mounted device like printer, scanner, and other external device
+/bin -> /usr/bin    contains all installed commands and programs for everyday use
+/sbin -> /usr/sbin  contains all installed commands and programs for system administrator use (fdisk, initctl, ipstate)
+/opt                contains all installed external programs (not part of OS)
+/mnt                manual mounted device or server will be listed in here, usually used by system administrator
+/media              automatic mounted device such an external disk drive will be listed under this directory
+/etc                configuration folder and files are listed here, always make a backup if you want to make a change
+/tmp                used to store temporary folders and files which will be erased when restart or shutdown
+/var                all system logs will be saved here
+/home               in Windows it is like "Users/", so it saves all user directories and files
+/proc               all running apps will save its files and folders here, once the apps stops, they are all deleted
