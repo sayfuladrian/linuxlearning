@@ -38,14 +38,59 @@ CP Commands Explanation
 
 cp
         cp fil1.txt fil2.txt                    it will copy fil1.txt to the same folder and rename the new one to fil2.txt
-cp -s               create a symbolic links, which is like a shortcut. When we open the file, it will redirect to original file
-cp -R               recursively copy the folders and files under a directory which we want to copy.
+cp -s                   create a symbolic links, which is like a shortcut. When we open the file, it will redirect to original file
+cp -R                   recursively copy the folders and files under a directory which we want to copy.
         cp -R folder1 folder2                   if folder2 presents, it will copy folder1 and its content to folder2
                                                 if folder2 is not, it will create folder2 and copy folder1 contents to folder1.
         cp -R folder1 ../testfolder2/folder2    the same but with relative path
         cp -R folder1 /home/user/testfolder2    the same but with absolute path
-cp -i               interactive mode, if the destination has the same file name or folder, it will prompt you question to overwrite
-cp -f               force copy if the folder cannot be open and it will remove and create a new folder with the same name
+cp -i                   interactive mode, if the destination has the same file name or folder, it will prompt you question to overwrite
+cp -f                   force copy if the folder cannot be open and it will remove and create a new folder with the same name
+cp -v                   verbose, it will show you what has done by the system
+cp -u                   update the file if there are newer version of the file
+cp -n, --no-clobber     do not overwrite the file that is existing
 
 ==========================================================================================================================================
 
+MV Commands Explanation
+
+mv
+        mv fil1.txt fil2.txt                    it will rename fil1.txt to fil2.txt
+mv -i                   interactive mode, if the destination has the same file name or folder, it will prompt you question to overwrite
+mv -f                   force copy if the folder cannot be open and it will remove and create a new folder with the same name
+mv -v                   verbose, it will show you what has done by the system
+mv -u                   update the file if there are newer version of the file
+mv -n, --no-clobber     do not overwrite the file that is existing
+
+==========================================================================================================================================
+
+RM Commands Explanation
+
+rm
+        rm fil1.txt fil3.txt                it will remove fil1.txt fil3.txt from directory
+rm -R
+        rm dir1 dir2                        it will remove dir1 & dir2 folders from directory. -R is for non-empty and folder
+rm -i                   it will prompt you confirmation each delete progress is made (per item)
+rm -I                   it will prompt you confirmation only once if more than 3 items
+        rm -I --interactive[WHEN]           WHEN: once, always, never. It is interactive mode like -I but with condition
+rm -f                   ignore non-existent files and folders, never prompt
+rm -v                   verbose, show the process
+rm -d                   remove empty directories
+
+==========================================================================================================================================
+
+drwxr-xr-x.
+first digit         d       indicates that it is a folder
+                    -       indicates that it is a file
+                    l       indicates that it is a link to a file or folder
+                    s       socket
+                    c       special file or device
+                    b       block device
+                    p       pipe
+3 digits                    are permissions of the owner has
+3 digits in the middle      are permissions the group has
+3 digits last               are permission anyone else has
+                    r       read permission
+                    w       write permission
+                    x       execute permission
+                    -       no permission or disabled.
